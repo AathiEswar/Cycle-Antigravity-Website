@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  @keyframes scroll-indicator {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+  }
+  .animate-scroll-indicator {
+    animation: scroll-indicator 2s cubic-bezier(0.76, 0, 0.24, 1) infinite;
+  }
+}
